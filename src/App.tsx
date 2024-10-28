@@ -7,8 +7,8 @@ import ImageGallery from "./components/ImageGallery/ImageGallery";
 import ErrorMessage from "./components/ErrorMessage/ErrorMessage";
 import { fetchImages } from "./Api"; 
 import { Toaster } from "react-hot-toast";
-import s from "./App.module.css"
 import { Image } from './types';
+import s from './App.module.css'
 
 
 
@@ -53,7 +53,7 @@ const  App=()=> {
   const handleLoadMore = (): void => setPage((prevPage) => prevPage + 1);
 
   return (
-    <div className={s.container}>
+    <div className={s.container} >
       <SearchBar onSubmit={handleSearch} />
       {error && <ErrorMessage message={error} />}
       <ImageGallery images={images} onImageClick={handleImageClick} />
